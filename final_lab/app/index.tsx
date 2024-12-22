@@ -7,7 +7,7 @@ export default function Home()
     <>
        <View>
         <Text>
-          Hello world 
+          Hello world lolo
         </Text>
        </View>
     </>
