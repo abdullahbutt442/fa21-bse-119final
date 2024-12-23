@@ -1,0 +1,17 @@
+app.post('/subscribe', async (req, res) => {
+  const { plan, userId } = req.body;
+  let amount = 0;
+  
+  if (plan === 'monthly') {
+    amount = 9.99;
+  } else if (plan === 'yearly') {
+    amount = 99.99;
+  }
+  await subscribeUserToPlan(userId, amount, plan);
+  
+  res.json({ message: `Subscribed to ${plan} plan successfully.` });
+});
+function subscribeUserToPlan(userId: any, amount: number, plan: any) {
+    throw new Error("Function not implemented.");
+}
+

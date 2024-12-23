@@ -1,0 +1,14 @@
+import messaging from '@react-native-firebase/messaging';
+
+const requestUserPermission = async () => {
+  const authStatus = await messaging().requestPermission();
+  if (authStatus === messaging.AuthorizationStatus.AUTHORIZED) {
+    console.log('Notification permissions granted');
+  }
+};
+
+const onMessageReceived = async (remoteMessage: any) => {
+  console.log('New message received: ', remoteMessage);
+};
+
+messaging().onMessage(onMessageReceived);

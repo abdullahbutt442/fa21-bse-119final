@@ -1,0 +1,8 @@
+import analytics from '@react-native-firebase/analytics';
+
+const logEvent = async () => {
+  await analytics().logEvent('order_placed', {
+    order_id: '12345',
+    amount: '200',
+  });
+};

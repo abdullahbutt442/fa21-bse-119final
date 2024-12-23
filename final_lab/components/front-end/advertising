@@ -1,0 +1,16 @@
+
+const ProductListScreen = ({ products }) => {
+  const promotedProducts = products.filter(product => product.isPromoted);
+  
+  return (
+    <View>
+      <Text>Promoted Products</Text>
+      {promotedProducts.map((product) => (
+        <View key={product.id}>
+          <Text>{product.name}</Text>
+          <Image source={{ uri: product.image }} />
+        </View>
+      ))}
+    </View>
+  );
+};

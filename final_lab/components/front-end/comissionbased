@@ -1,0 +1,14 @@
+
+const CartScreen = () => {
+  const cartTotal = 1000; 
+  const commissionFee = cartTotal * 0.05; 
+
+  return (
+    <View>
+      <Text>Total: ${cartTotal}</Text>
+      <Text>Platform Commission (5%): ${commissionFee}</Text>
+      <Text>Amount to Pay: ${cartTotal - commissionFee}</Text>
+      
+    </View>
+  );
+};

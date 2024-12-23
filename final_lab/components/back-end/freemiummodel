@@ -1,0 +1,14 @@
+app.get('/premium-features', async (req, res) => {
+  const { userId } = req.query;
+
+  const user = await user.findByPk(userId);
+
+  if (user && user.isPremium) {
+   
+    res.json({ message: 'Access granted to premium features' });
+  } else {
+    res.json({ message: 'Upgarde to premium for access' });
+  }
+  
+});
+
